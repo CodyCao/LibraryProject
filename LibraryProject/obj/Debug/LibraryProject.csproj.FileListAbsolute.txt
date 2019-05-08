@@ -1,0 +1,7 @@
+D:\Documents\Projects\LibraryProject\LibraryProject\LibraryProject\bin\Debug\MangaLibrary.exe.config
+D:\Documents\Projects\LibraryProject\LibraryProject\LibraryProject\bin\Debug\MangaLibrary.exe
+D:\Documents\Projects\LibraryProject\LibraryProject\LibraryProject\bin\Debug\MangaLibrary.pdb
+D:\Documents\Projects\LibraryProject\LibraryProject\LibraryProject\obj\Debug\LibraryProject.csprojAssemblyReference.cache
+D:\Documents\Projects\LibraryProject\LibraryProject\LibraryProject\obj\Debug\LibraryProject.csproj.CoreCompileInputs.cache
+D:\Documents\Projects\LibraryProject\LibraryProject\LibraryProject\obj\Debug\MangaLibrary.exe
+D:\Documents\Projects\LibraryProject\LibraryProject\LibraryProject\obj\Debug\MangaLibrary.pdb

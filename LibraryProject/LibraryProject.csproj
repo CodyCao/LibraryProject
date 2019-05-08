@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{29CBC719-63F2-4409-85B4-8B328D10865F}</ProjectGuid>
+    <ProjectGuid>{930B1D8F-9E17-467A-BADC-75494494E95F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>MangaLibrary</RootNamespace>
     <AssemblyName>MangaLibrary</AssemblyName>
