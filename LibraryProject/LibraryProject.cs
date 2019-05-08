@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MangaLibrary
+namespace LibraryProject
 {
-    class MangaLibrary
+    class Library
     {
         Archive a = new Archive();
         Dictionary<string, Collection> c = new Dictionary<string, Collection>();

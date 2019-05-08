@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MangaLibrary
+namespace LibraryProject
 {
     class Program
     {
         static void Main(string[] args)
         {
-            MangaLibrary lib = new MangaLibrary();
+            Library lib = new Library();
         }
     }
-
-// Test
 }
