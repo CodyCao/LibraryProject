@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{930B1D8F-9E17-467A-BADC-75494494E95F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MangaLibrary</RootNamespace>
-    <AssemblyName>MangaLibrary</AssemblyName>
+    <RootNamespace>LibraryProject</RootNamespace>
+    <AssemblyName>LibraryProject</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archive.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="Collection.cs" />
-    <Compile Include="MangaLibrary.cs" />
+    <Compile Include="Library.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />

@@ -11,6 +11,10 @@ namespace LibraryProject
         static void Main(string[] args)
         {
             Library lib = new Library();
+
+            lib.AddBook(new Book("0123456789123", " ", "ABC TITLE", "Cody Coa"));
+            lib.PrintBooks();
+            Console.ReadKey();
         }
     }
 }
