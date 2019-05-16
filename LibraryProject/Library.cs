@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace LibraryProject
 {
@@ -14,7 +16,8 @@ namespace LibraryProject
         public Library()
         {
             users = new List<User>();
-            books = new List<Book>();
+            books = JsonLoad("../../BookArchive.json");
+
         }
 
         // Accessors
@@ -69,6 +72,17 @@ namespace LibraryProject
             foreach (User u in users)
             {
                 Console.WriteLine(u.GetSetName);
+            }
+        }
+
+        //Json Functions
+        private List<Book> JsonLoad(string filename)
+        {
+            using (StreamReader r = new StreamReader(filename))
+            {
+                string json = r.ReadToEnd();
+                var jBooks = JsonConvert.DeserializeObject<List<Book>>(json);
+                return jBooks;
             }
         }
 

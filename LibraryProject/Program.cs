@@ -10,10 +10,14 @@ namespace LibraryProject
     {
         static void Main(string[] args)
         {
+            
             Library lib = new Library();
-
-            lib.AddBook(new Book("0123456789123", " ", "ABC TITLE", "Cody Coa"));
+            lib.AddBook(new Book("ABC TITLE", "Cody Coa","0123456789123", ""));
             lib.PrintBooks();
+
+            //JsonEdit a = new JsonEdit();
+            //a.JsonLoad("../../BookArchive.json");
+            
             Console.ReadKey();
         }
     }
