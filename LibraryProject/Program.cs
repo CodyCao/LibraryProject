@@ -11,13 +11,13 @@ namespace LibraryProject
         static void Main(string[] args)
         {
             
-            Library lib = new Library();
+            Library lib = new Library("../../BookArchive.json", "../../Users.json");
             lib.AddBook(new Book("ABC TITLE", "Cody Coa","0123456789123", ""));
             lib.PrintBooks();
+            lib.PrintUsers();
+            lib.JsonBookSave("../../BookArchiveSave.json");
+            lib.JsonUserSave("../../UsersSave.json");
 
-            //JsonEdit a = new JsonEdit();
-            //a.JsonLoad("../../BookArchive.json");
-            
             Console.ReadKey();
         }
     }

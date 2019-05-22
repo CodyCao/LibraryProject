@@ -1,14 +1,26 @@
 [
     {
-        "title": "Shield Hero",
-        "author": "dude",
+        "Title": "A",
+        "Author": "Cody Coa",
         "ISBN13": "0123456789123",
-        "ISBN10": "0123456789"
+        "ISBN10": ""
     },
     {
-        "title": "Shield Hero 2",
-        "author": "dude",
+        "Title": "B",
+        "Author": "Cody Coa",
         "ISBN13": "0123456789123",
-        "ISBN10": "0123456789"
+        "ISBN10": ""
+    },
+    {
+        "Title": "C",
+        "Author": "Cody Coa",
+        "ISBN13": "0123456789123",
+        "ISBN10": ""
+    },
+    {
+        "Title": "D",
+        "Author": "Cody Coa",
+        "ISBN13": "0123456789123",
+        "ISBN10": ""
     }
 ]

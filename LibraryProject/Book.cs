@@ -11,9 +11,8 @@ namespace LibraryProject
     {
         private string title;
         private string author;
-        private string ISBN13;
-        private string ISBN10;
-
+        private string isbn13;
+        private string isbn10;
 
         // Constructor
         [JsonConstructor]
@@ -21,37 +20,46 @@ namespace LibraryProject
         {
             this.title = title;
             this.author = author;
-            this.ISBN13 = ISBN13;
-            this.ISBN10 = ISBN10;
+            this.isbn13 = ISBN13;
+            this.isbn10 = ISBN10;
         }
         public Book(string title, string author)
         {
             this.title = title;
             this.author = author;
-            this.ISBN13 = "";
-            this.ISBN10 = "";
+            this.isbn13 = "";
+            this.isbn10 = "";
         }
         
         //Accessors
-        public string TitleGetSet
+        public string Title
         {
             get { return title; }
             set { title = value; }
         }
-        public string AuthorGetSet
+        public string Author
         {
             get { return author; }
             set { author = value; }
         }
-        public string ISBN13GetSet
+        public string ISBN13
         {
-            get { return ISBN13; }
-            set { ISBN13 = value; }
+            get { return isbn13; }
+            set { isbn13 = value; }
         }
         public string ISBN10GetSet
         {
-            get { return ISBN10; }
-            set { ISBN10 = value; }
+            get { return isbn10; }
+            set { isbn10 = value; }
+        }
+
+        //Functions
+        public override string ToString()
+        {
+            return "Title: " + this.title +
+                        "\tAuthor: " + this.author +
+                        "\tISBN-13: " + this.isbn13 +
+                        "\tISBN-10: " + this.isbn10;
         }
     }
 
