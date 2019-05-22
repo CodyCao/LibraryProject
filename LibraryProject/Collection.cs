@@ -40,10 +40,7 @@ namespace LibraryProject
         {
             foreach(Book b in this.collection)
             {
-                Console.WriteLine("Title: " + b.TitleGetSet +
-                        "\tAuthor: " + b.AuthorGetSet +
-                        "\tISBN-13: " + b.ISBN13GetSet +
-                        "\tISBN-10: " + b.ISBN10GetSet);
+                Console.WriteLine(b.ToString());
             }
         }
         public void AddBook(Book b)
