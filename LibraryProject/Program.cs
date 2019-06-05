@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace LibraryProject
 {
@@ -10,15 +12,32 @@ namespace LibraryProject
     {
         static void Main(string[] args)
         {
-            
-            Library lib = new Library("../../BookArchive.json", "../../Users.json");
-            lib.AddBook(new Book("ABC TITLE", "Cody Coa","0123456789123", ""));
+            Library lib = LibLoad("../../JsonLibraryLoad.json");
             lib.PrintBooks();
             lib.PrintUsers();
-            lib.JsonBookSave("../../BookArchiveSave.json");
-            lib.JsonUserSave("../../UsersSave.json");
 
             Console.ReadKey();
+
+            LibSave("../../JsonLibrarySave2.json",lib);
+        }
+
+        public static Library LibLoad(string filename)
+        {
+            using (StreamReader r = new StreamReader(filename))
+            {
+                string json = r.ReadToEnd();
+                Library jLib = JsonConvert.DeserializeObject<Library>(json);
+                return jLib;
+            }
+        }
+        public static void LibSave(string fileName, Library lib)
+        {
+            using (StreamWriter file = File.CreateText(fileName))
+            {
+                JsonSerializer ser = new JsonSerializer();
+                ser.Serialize(file, lib);
+            }
+            
         }
     }
 }

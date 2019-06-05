@@ -1,0 +1,32 @@
+{
+    "Books": [
+        {
+            "Title": "A",
+            "Author": "Cody Coa",
+            "ISBN13": "0123456789123",
+            "ISBN10": ""
+        },
+        {
+            "Title": "B",
+            "Author": "Cody Coa",
+            "ISBN13": "0123456789123",
+            "ISBN10": ""
+        },
+        {
+            "Title": "C",
+            "Author": "Cody Coa",
+            "ISBN13": "0123456789123",
+            "ISBN10": ""
+        }
+    ],
+    "Users": [
+        {
+            "Name": "Cody Cao",
+            "Collection": [ "A", "B", "C" ]
+        },
+        {
+            "Name": "Brenna Carnahan",
+            "Collection": [ "A", "B", "C" ]
+        }
+    ]
+}
