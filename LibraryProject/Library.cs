@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace LibraryProject
 {
@@ -12,32 +13,25 @@ namespace LibraryProject
     {
         private List<User> users;
         private List<Book> books;
-        private readonly string jBookFile;
-        private readonly string jUserFile;
-
+        /*
         // Constructor
-        public Library()
+        [JsonConstructor]
+        public Library(List<User> u, List<Book> b)
         {
-            users = new List<User>();
-            books = new List<Book>();
-            jBookFile = null;
-            jUserFile = null;
+            users = u;
+            books = b;
         }
-        public Library(string jBookFile,string jUserFile)
-        {
-            users = JsonUserLoad(jUserFile);
-            books = JsonBookLoad(jBookFile);
-            this.jBookFile = jBookFile;
-            this.jUserFile = jUserFile;
-        }
+        */
 
         // Accessors
-        public List<User> UserGetSet
+        [JsonProperty("Users")]
+        public List<User> User
         {
             get { return users; }
             set { users = value; }
         }
-        public List<Book> BookGetSet
+        [JsonProperty("Books")]
+        public List<Book> Book
         {
             get { return books; }
             set { books = value; }
@@ -48,19 +42,19 @@ namespace LibraryProject
         {
             // Duplicate Check here
             users.Add(u);
-        // Incomplete
+            // Incomplete
         }
         public void AddBook(Book b)
         {
             // Duplicate Check here
             books.Add(b);
-        // Incomplete
+            // Incomplete
         }
         public void RemoveUser(User u)
         {
             // Duplicate Check here
             users.Remove(u);
-        // Incomplete
+            // Incomplete
         }
         public void RemoveBook(Book b)
         {
@@ -70,7 +64,7 @@ namespace LibraryProject
 
         public void PrintBooks()
         {
-            foreach(Book b in books)
+            foreach (Book b in books)
             {
                 Console.WriteLine(b.ToString());
             }
@@ -80,58 +74,6 @@ namespace LibraryProject
             foreach (User u in users)
             {
                 Console.WriteLine(u.ToString());
-            }
-        }
-
-        //Json Functions
-        public List<Book> JsonBookLoad(string filename)
-        {
-            using (StreamReader r = new StreamReader(filename))
-            {
-                string json = r.ReadToEnd();
-                var jBooks = JsonConvert.DeserializeObject<List<Book>>(json);
-                return jBooks;
-            }
-        }
-        public List<User> JsonUserLoad(string filename)
-        {
-            using (StreamReader r = new StreamReader(filename))
-            {
-                string json = r.ReadToEnd();
-                var jUsers = JsonConvert.DeserializeObject<List<User>>(json);
-                return jUsers;
-            }
-        }
-        public void JsonBookSave()
-        {
-            using (StreamWriter file = File.CreateText(jBookFile))
-            {
-                JsonSerializer ser = new JsonSerializer();
-                ser.Serialize(file, books);
-            }
-        }
-        public void JsonBookSave(string filename)
-        {
-            using (StreamWriter file = File.CreateText(filename))
-            {
-                JsonSerializer ser = new JsonSerializer();
-                ser.Serialize(file, books);
-            }
-        }
-        public void JsonUserSave()
-        {
-            using (StreamWriter file = File.CreateText(jUserFile))
-            {
-                JsonSerializer ser = new JsonSerializer();
-                ser.Serialize(file, books);
-            }
-        }
-        public void JsonUserSave(string filename)
-        {
-            using (StreamWriter file = File.CreateText(filename))
-            {
-                JsonSerializer ser = new JsonSerializer();
-                ser.Serialize(file, books);
             }
         }
     }
