@@ -36,7 +36,6 @@ namespace LibraryProject
             get { return this.collection; }
             set { this.collection = value; }
         }
-
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder("User: " + name + "\nCollection: ");

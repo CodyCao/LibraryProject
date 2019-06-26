@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="Book.cs" />
     <Compile Include="Collection.cs" />
-    <Compile Include="JsonEdit.cs" />
     <Compile Include="Library.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="BookArchive.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
