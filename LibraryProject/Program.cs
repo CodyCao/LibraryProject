@@ -17,14 +17,9 @@ namespace LibraryProject
             lib.PrintUsers();
 
             Console.ReadKey();
-
-
-
-<<<<<<< HEAD
+            
             LibSave("../../JsonLibrarySave2.json",lib);
-=======
-            LibSave("../../JsonLibrarySave2.json", lib);
->>>>>>> master
+
         }
 
         public static Library LibLoad(string filename)
@@ -43,11 +38,6 @@ namespace LibraryProject
                 JsonSerializer ser = new JsonSerializer();
                 ser.Serialize(file, lib);
             }
-<<<<<<< HEAD
-            
-=======
-
->>>>>>> master
         }
     }
 }
