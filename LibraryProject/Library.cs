@@ -42,19 +42,19 @@ namespace LibraryProject
         {
             // Duplicate Check here
             users.Add(u);
-        // Incomplete
+            // Incomplete
         }
         public void AddBook(Book b)
         {
             // Duplicate Check here
             books.Add(b);
-        // Incomplete
+            // Incomplete
         }
         public void RemoveUser(User u)
         {
             // Duplicate Check here
             users.Remove(u);
-        // Incomplete
+            // Incomplete
         }
         public void RemoveBook(Book b)
         {
@@ -64,7 +64,7 @@ namespace LibraryProject
 
         public void PrintBooks()
         {
-            foreach(Book b in books)
+            foreach (Book b in books)
             {
                 Console.WriteLine(b.ToString());
             }
